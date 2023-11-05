@@ -9,3 +9,4 @@ services:
       - "8000:8000"
     volumes:
       - ./todo:/app/todo
+    command: bash -c "python todo/manage.py migrate && python todo/manage.py runserver 0.0.0.0:8000"
